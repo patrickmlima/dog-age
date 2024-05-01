@@ -1,47 +1,50 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+  import AgeForm from './components/AgeForm.vue';
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
+    <h1>Here you can check your dog age human equivalence</h1>
   </header>
 
   <main>
-    <TheWelcome />
+    <AgeForm />
   </main>
+
+  <footer>
+    <p>&copy; Patrick Lima, 2024</p>
+  </footer>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
   header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+    position: relative;
+    top: 0;
+    display: block;
+    background-color: #1ba62f;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    color: whitesmoke;
+
+    h1 {
+      font-size: 1.7rem;
+    }
+  }
+  
+  main {
+    position: relative;
+    display: block;
+    margin-bottom: 2.5rem;
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
+  footer {
+    position: fixed;
+    bottom: 0;
+    height: 2.5rem;
+    padding-left: 2rem;
+    background-color: #1ba62f;
+    color: whitesmoke;
+    width: 100%;
+    font-size: small;
   }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>
