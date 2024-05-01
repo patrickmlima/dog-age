@@ -1,31 +1,35 @@
 <script setup lang="ts">
-    import { ref, computed } from 'vue';
+import { ref, computed } from 'vue'
 
-    const age = ref(0);
-    const equivalentAge = computed(() => age.value ? Math.log(age.value) * 16 + 31 : 0);
+const age = ref(0)
+const equivalentAge = computed(() => (age.value ? Math.log(age.value) * 16 + 31 : 0))
 </script>
 
 <template lang="html">
-    <form id="age">
-        <label for="age">Your dog age: </label>
-        <input id="age" type="number" min="0" v-model="age" />
-    </form>
-    <p>Equivalent to: {{ equivalentAge }}</p>
+  <form id="age">
+    <label for="age">Your dog age: <input id="age" type="number" min="0" v-model="age" /></label>
+  </form>
+  <p>Equivalent to: {{ equivalentAge }}</p>
 
-    <section id="references">
-        <p>The calculated age is based on a 2019 study called: 
-            <a href="https://www.biorxiv.org/content/10.1101/829192v1.full">Quantitative translation of dog-to-human aging by conserved remodeling of epigenetic networks</a>
-        </p>
-    </section>
+  <section id="references">
+    <p>
+      The calculated age is based on a 2019 study called:
+      <a href="https://www.biorxiv.org/content/10.1101/829192v1.full"
+        >Quantitative translation of dog-to-human aging by conserved remodeling of epigenetic
+        networks</a
+      >
+    </p>
+  </section>
 </template>
 
 <style scoped>
-    form, p {
-        padding: 10px;
-    }
+form,
+p {
+  padding: 10px;
+}
 
-    #references {
-        margin-top: 7rem;
-        width: 40%;
-    }
+#references {
+  margin-top: 7rem;
+  width: 40%;
+}
 </style>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import AgeForm from './components/AgeForm.vue';
+import AgeForm from './components/AgeForm.vue'
 </script>
 
 <template>
@@ -17,34 +17,34 @@
 </template>
 
 <style scoped>
-  header {
-    position: relative;
-    top: 0;
-    display: block;
-    background-color: #1ba62f;
-    width: 100%;
-    padding: 0.5rem 1rem;
-    color: whitesmoke;
+header {
+  position: relative;
+  top: 0;
+  display: block;
+  background-color: #1ba62f;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  color: whitesmoke;
 
-    h1 {
-      font-size: 1.7rem;
-    }
+  h1 {
+    font-size: 1.7rem;
   }
-  
-  main {
-    position: relative;
-    display: block;
-    margin-bottom: 2.5rem;
-  }
+}
 
-  footer {
-    position: fixed;
-    bottom: 0;
-    height: 2.5rem;
-    padding-left: 2rem;
-    background-color: #1ba62f;
-    color: whitesmoke;
-    width: 100%;
-    font-size: small;
-  }
+main {
+  position: relative;
+  display: block;
+  margin-bottom: 3rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  height: 3rem;
+  padding-left: 2rem;
+  background-color: #1ba62f;
+  color: whitesmoke;
+  width: 100%;
+  font-size: 1rem;
+}
 </style>
