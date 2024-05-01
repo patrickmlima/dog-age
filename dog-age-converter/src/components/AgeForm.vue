@@ -2,7 +2,7 @@
 import { ref, computed } from 'vue'
 
 const age = ref(0)
-const equivalentAge = computed(() => (age.value ? (Math.log(age.value) * 16 + 31).toFixed(2) : '0'));
+const equivalentAge = computed(() => (age.value ? (Math.log(age.value) * 16 + 31).toFixed(2) : '0'))
 </script>
 
 <template lang="html">
