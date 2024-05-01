@@ -2,14 +2,14 @@
 import { ref, computed } from 'vue'
 
 const age = ref(0)
-const equivalentAge = computed(() => (age.value ? Math.log(age.value) * 16 + 31 : 0))
+const equivalentAge = computed(() => (age.value ? (Math.log(age.value) * 16 + 31).toFixed(2) : '0'));
 </script>
 
 <template lang="html">
   <form id="age">
     <label for="age">Your dog age: <input id="age" type="number" min="0" v-model="age" /></label>
   </form>
-  <p>Equivalent to: {{ equivalentAge }}</p>
+  <p>Equivalent to: {{ equivalentAge }} human years</p>
 
   <section id="references">
     <p>
@@ -29,7 +29,7 @@ p {
 }
 
 #references {
-  margin-top: 7rem;
-  width: 40%;
+  position: fixed;
+  bottom: 2rem;
 }
 </style>
